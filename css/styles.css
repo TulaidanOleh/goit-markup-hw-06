@@ -772,10 +772,30 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  margin-bottom: 10px;
-
   padding: 12px 42px;
   box-sizing: border-box;
+}
+
+.modal-form:focus {
+  border-color: var(--color-hover);
+  /*!!!!!*/
+}
+
+.modal-name {
+  margin-bottom: 10px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.modal-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .modal-textarea {
@@ -811,14 +831,44 @@ img {
   letter-spacing: 0.03em;
   color: var(--color-taxt-basic);
 
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
 }
 
 .checkbox-link {
   color: var(--color-hover);
+  margin-left: 5px;
 }
-/*!!!!!*/
+
+.modal-checkbox {
+  margin-left: 12px;
+}
+
+.checkbox-text span {
+  border: 2px solid var(--color-taxt-header);
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  margin-right: 7px;
+  margin-left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.checkbox-icon {
+  fill: transparent;
+}
+
+.modal-check:checked + .checkbox-text span {
+  background-color: var(--color-hover);
+  border: none;
+}
+.modal-check:checked + .checkbox-text .checkbox-icon {
+  fill: var(--color-basic);
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -827,7 +877,7 @@ img {
   overflow: hidden;
   border: 0;
   padding: 0;
-  clip: rect(0000);
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
 }
